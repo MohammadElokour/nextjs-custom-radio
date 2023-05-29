@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { Grid, Box, Typography } from "@mui/material";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
@@ -43,7 +43,7 @@ const CustomRadio = (props) => (
                 container
                 alignItems="center"
                 justifyContent="space-between"
-                sx={{ height: 50, px: 2.5 }}
+                sx={{ height: 50, px: 2.5, borderTop: "1px solid #232323" }}
               >
                 <Typography
                   fontSize={14}
@@ -61,9 +61,9 @@ const CustomRadio = (props) => (
                   value={radioElement.value}
                   control={
                     <Radio
-                      sx={{p: 0, border: "1px solid #232323" }}
+                      sx={{ p: 0, border: "1px solid #232323" }}
                       disableRipple
-                      checkedIcon={<CheckCircleIcon />}
+                      checkedIcon={<CheckCircleIcon htmlColor="#4fefa9" />}
                     />
                   }
                 />
@@ -73,21 +73,21 @@ const CustomRadio = (props) => (
         </RadioGroup>
       </FormControl>
     </Box>
-  </Grid> 
-)
+  </Grid>
+);
 
 CustomRadio.defaultProps = {
   radioTitle: "Choose one of the following options: ",
   radioData: [
-    {title: "Option 1", subTitle:"this is the 1st option", value: 1 },
-    {title: "Option 2", subTitle:"this is the 2nd option", value: 2 },
-    {title: "Option 3", subTitle:"this is the 3rd option", value: 3 },
+    { title: "Option 1", subTitle: "this is the 1st option", value: 1 },
+    { title: "Option 2", subTitle: "this is the 2nd option", value: 2 },
+    { title: "Option 3", subTitle: "this is the 3rd option", value: 3 },
   ],
 };
 
 CustomRadio.propTypes = {
   radioTitle: PropTypes.string,
   radioData: PropTypes.array,
-}
+};
 
 export default CustomRadio;
